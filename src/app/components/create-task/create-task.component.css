@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    margin-top:50px;
+}
+
+
+.example-container {
+    
+    margin-left:18%;
+    margin-top:20px;
+    border:1px solid blue;
+    padding-left:50px;
+    padding-top:10px;
+    width:62%;
+    border-radius:10px;
+  }
+  
+  .example-container > * {
+    width: 90%;
+  }
+
+  form{
+      margin-top:40px;
+  }
+  .col-6{
+      margin-top:30px;
+  }

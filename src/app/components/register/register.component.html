@@ -1,0 +1,44 @@
+<div class="container">
+    <h1>Registration Form</h1><br><br>
+
+    <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && onRegisterSubmit(); registerForm.reset()"  novalidate>
+        <div class="example-container">
+            
+            <mat-form-field>
+                <input id="ecode"
+                    matInput
+                    formControlName="ecode"
+                    [(ngModel)]="user.ecode"
+                    placeholder="Enter Your Employee Code"
+                >
+            </mat-form-field><br>
+            
+            <mat-form-field>
+                    <input id="email"
+                        matInput
+                        formControlName="email"
+                        [(ngModel)]="user.email"
+                        placeholder="Enter Your Email"
+                    >
+            </mat-form-field><br>
+
+            
+            <mat-form-field>
+                    <input id="password"
+                           matInput
+                           formControlName="password"
+                           [(ngModel)]="user.password"
+                           placeholder="Enter your password"
+                           [type]="!hide ? 'password':'text'" />
+                      <mat-icon matSuffix (click)="hide = !hide">
+                        {{hide ? 'visibility' : 'visibility_off'}}
+                      </mat-icon>
+                  </mat-form-field>
+                <br>
+            <button mat-raised-button type="submit" style="color:white; background-color:green;" [disabled]="!registerForm.valid">Register</button><br>
+            <button mat-raised-button routerLink='/login' style="background-color:blue; color:white;">Login</button><br>
+        </div>
+
+    </form>
+    
+</div>

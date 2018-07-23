@@ -1,0 +1,12 @@
+.navbar{
+    float:right;
+    margin-left:60%;
+}
+a{
+    text-decoration:none;
+    color:white;
+    margin-left:20%;
+}
+span{
+    color:red;
+}

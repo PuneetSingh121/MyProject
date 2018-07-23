@@ -1,0 +1,57 @@
+<div class="container">
+    <h1>Manage Your Tasks Here!!!</h1>
+
+    <form [formGroup]="taskForm" (ngSubmit)="taskForm.valid && onTaskSubmit()"  novalidate>
+        
+      <div class="row example-container">
+                <div class="col-6">
+                    <mat-form-field>
+                        <input id="tname"
+                            matInput
+                            formControlName="tname"
+                            [(ngModel)]="task.tname"
+                            placeholder="Enter Your Task Name"
+                        >
+                    </mat-form-field><br><br>
+                    <mat-form-field>
+                        <input id="start" type="date"
+                            matInput
+                            formControlName="start"
+                            [(ngModel)]="task.start"
+                            placeholder="Starting Date"
+                        >
+                    </mat-form-field><br><br>
+                    
+                </div>
+                <div class="col-6">
+                    <mat-form-field>
+                        <input id="ecode"
+                            matInput
+                            formControlName="ecode"
+                            [(ngModel)]="task.ecode"
+                            placeholder="Enter Your Employee Code"
+                        >
+                    </mat-form-field><br><br>
+                    <mat-form-field>
+                        <input id="end" type="date"
+                            matInput
+                            formControlName="end"
+                            [(ngModel)]="task.end"
+                            placeholder="Ending Date"
+                        >
+                    </mat-form-field><br><br>
+                </div>
+
+                <mat-form-field>
+                    <input id="description"
+                        matInput
+                        formControlName="description"
+                        [(ngModel)]="task.description"
+                        placeholder="Description Of Your Task"
+                    >
+                </mat-form-field><br><br>
+                <button mat-raised-button type="submit" style="color:white; background-color:green; margin-bottom:20px;" [disabled]="!taskForm.valid">Create</button><br>
+            </div>
+            
+    </form>
+</div>
